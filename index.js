@@ -17,17 +17,17 @@ function destructivelyRemoveFirstDriver(){
 }
 
 function appendDriver(name){
-  return drivers.push(name);
+  return [...drivers, name];
 }
 
 function prependDriver(name){
-
+  return [name, ...drivers];
 }
 
 function removeLastDriver(){
-
+  return drivers.slice(1);
 }
 
 function removeFirstDriver(){
-
+  return drivers.slice(0, drivers.length - 1);
 }
